@@ -1,4 +1,3 @@
-#include "touch_lib_conf.h"
 #include "touch_controller_lib.h"
 #include <xs1.h>
 
