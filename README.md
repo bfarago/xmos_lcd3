@@ -1,8 +1,10 @@
 # xmos_lcd3
-Lcd test code, initial version
+Example project for lib_lcd, lib_display_controller, lib_sdram, lib_i2c, lib_touch.
 
-Could you please help?
+(this one use interfaces bw tasks)
 
-dislay_controller.xc : 121
-	a.ready(); <-- ET_LOAD_STORE
-	
+ XMOS XP-SKC-L2 (1V1, 1v2)
+ Star: XA-SK-SDRAM
+ Triangle: XA-SK-SCR480
+
+xTIMEcomposer Version: Community_14.0.3 (build 17001, May-26-2015) .
