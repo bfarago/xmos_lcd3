@@ -15,7 +15,8 @@ typedef enum {
 typedef enum {
     CMD_SUCCESS,
     CMD_OUT_OF_RANGE,
-    CMD_MODIFY_CURRENT_FB
+    CMD_MODIFY_CURRENT_FB,
+    CMD_UNDEF
 } e_command_return_val;
 
 typedef struct {

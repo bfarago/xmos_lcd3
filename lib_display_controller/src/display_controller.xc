@@ -131,7 +131,7 @@ void command_buffer(server interface app_to_cmd_buffer_i  a,
 void response_buffer(server interface dc_to_res_buf_i  tx,
         server interface res_buf_to_app_i rx) {
     unsigned * movable entry;
-    unsigned return_val;
+    unsigned return_val=CMD_UNDEF;
     int occupied = 0;
     tx.ready();
     while (1) {
@@ -145,6 +145,7 @@ void response_buffer(server interface dc_to_res_buf_i  tx,
             case occupied => rx.pop() -> {unsigned * movable p, unsigned r}:
                 p = move(entry);
                 r = return_val;
+                //if (CMD_UNDEF!= r)
                 tx.ready();
                 occupied = 0;
             break;
@@ -389,7 +390,8 @@ void display_controller(
                         c_sdram_client, sdram_state_client, s, image_base_address);
                 break;
             }
-
+            case from_dc.ready():
+                break;
         }
     }
 }
